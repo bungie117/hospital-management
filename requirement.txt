@@ -1,0 +1,4 @@
+reportlab
+Django
+django-widget-tweaks
+sqlparse
