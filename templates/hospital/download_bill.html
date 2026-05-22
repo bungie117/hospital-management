@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <meta charset="utf-8">
+  <style>
+   body {
+   font-family: Arial, sans-serif;
+   color: #555;
+   }
+
+  .invoice-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  font-size: 16px;
+  line-height: 24px;
+ }
+
+ table {
+  width: 100%;
+  border-collapse: collapse;
+ }
+
+ table td {
+  padding: 5px;
+  vertical-align: top;
+ }
+
+ .heading td {
+  background: #eee;
+  font-weight: bold;
+ }
+
+ .item td {
+  border-bottom: 1px solid #eee;
+ }
+  </style>
+</head>
+
+<body>
+
+  <br><br><br>
+  <div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+      <tr class="top">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td class="title">
+                <h5>Эмнэлгийн менежмент</h5>
+              </td>
+
+              <td>
+
+                Хүлээн авсан огноо: {{admitDate}}<br>
+                Гаргасан огноо: {{releaseDate}}<br>
+                Өнгөрсөн өдрүүд: {{daySpent}}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="information">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                Өвчтөний нэр : {{patientName}}<br>
+                Өвчтөний утас : {{mobile}}<br>
+                Өвчтөний хаяг : {{address}}<br>
+              </td>
+
+              <td>
+                Эмчийн нэр :<br>
+                {{assignedDoctorName}}<br>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+
+      <tr class="information">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                Өвчин ба шинж тэмдэг :<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp {{symptoms}}
+              </td>
+
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+
+
+      <tr class="information">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                Төлбөр :<br><br>
+                Өрөөний төлбөр {{daySpent}} Өдрүүд: {{roomCharge}}<br>
+                Эмчийн төлбөр : {{doctorFee}}<br>
+                Эмийн үнэ : {{medicineCost}}<br>
+                Бусад төлбөр : {{OtherCharge}} <br><br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp Нийт Төгрөг : {{total}}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+</body>
+
+
+</html>
